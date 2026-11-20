@@ -1,0 +1,29 @@
+[package]
+name = "gridtui"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+authors = ["Huy Vu (huyvu8051)"]
+description = "A keyboard-driven, vim-style terminal database client: a lightweight DataGrip alternative"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/huyvu8051/gridtui"
+readme = "README.md"
+keywords = ["database", "postgres", "sql", "tui", "vim"]
+categories = ["command-line-utilities", "development-tools"]
+publish = false
+
+[dependencies]
+anyhow = "1.0.104"
+crossterm = "0.29"
+keyring = { version = "3", features = ["apple-native", "windows-native", "linux-native"] }
+ratatui = "0.30"
+rustls = "0.23"
+rustls-platform-verifier = "0.7"
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.151"
+tokio = { version = "1.53.1", features = ["full"] }
+tokio-postgres = "0.7.18"
+tokio-postgres-rustls = "0.13"
+toml = "1.1.4"
+tuikit = { git = "https://github.com/huyvu8051/tuikit" }
+uuid = { version = "1", features = ["v4", "serde"] }
